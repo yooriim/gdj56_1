@@ -1,0 +1,18 @@
+#button-Container{
+
+    display: flex;
+    margin-left: 25%;
+
+}
+#button-Container .btns{
+
+    background-color: #075A2A;
+    justify-content: space-between;
+    vertical-align: middle;
+    width: 400px;
+    height: 200px;
+    margin: 30px;
+    color:white;
+    font-size: 40px;
+    
+}

@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+body{
+    background-color: #d9dfd4;
+}
+/* 상단바 고정메뉴 */
+header{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Poor Story', cursive;
+}
+div.menu{
+    font-size:35px;
+    font-weight:bolder;
+    vertical-align:middle;
+    margin-top:45px;
+}
+.buttonContainer>button{    
+    width:150px;
+    height:40px;     
+    background-color: rgb(7, 90, 42);
+    color:white;
+    border:5px;
+}
+.buttonContainer>button>p{
+    font-weight: bolder;
+    font-size:17px;
+}
+#loginBtn{
+    margin-top:20px;
+    margin-right:20px;
+    border-radius: 5px;
+}
+p{
+    margin:0px;
+}
+
+
+/* 12/04 추가 */
+
+div.menu a{
+    text-decoration:none;
+}
+div.menu a:visited{
+    color:black;
+
+}
+div.buttonContainer *{
+    text-decoration:none;
+    color:white;    
+
+}
+div.buttonContainer *:visited{
+    text-decoration:none;
+    color:white;
+
+}
+a:-webkit-any-link {
+    color: black;
+    cursor: pointer;
+    text-decoration:none;
+
+}
+
+button{
+    border-radius: 5px;
+}
