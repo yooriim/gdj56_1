@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2> 회원등록</h2>
+	<fieldset>
+	<legend>회원등록</legend>
+	<form action="/1121_prac/enrolldata.do" method="get">		
+		아이디 <input type="text" name="userId"><br>
+		비밀번호 <input type="password" name="userPw"><br>
+		이름 <input type="text" name="name"><br>
+		닉네임 <input type="text" name="nickname"><br>
+		html/css <input type="checkbox" name="lang" value="html/css">
+		javascript <input type="checkbox" name="lang" value="javascript">
+		jquery <input type="checkbox" name="lang" value="jquery">
+		servlet <input type="checkbox" name="lang" value="servlet">
+		<br>
+		남 <input type="radio" name="gender" value="M">
+		여 <input type="radio" name="gender" value="F"><br>
+		자기소개 <textarea name="introduce" cols="30" rows="3"></textarea>
+		<br>
+		<input type="submit" value="회원가입">
+	</form>
+	</fieldset>
+</body>
+</html>
