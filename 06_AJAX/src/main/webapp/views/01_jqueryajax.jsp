@@ -32,26 +32,6 @@
 	<div id="container"></div>
 	
 	<script>
-		$("#btn3").click(e=>{
-			$.post("<%=request.getContextPath()%>/ajax/jsAjax.do",
-					{name:$("#data").val()},
-					data=>{
-						$("#container").html(data);
-					})
-		})
-	
-	
-		$("#btn2").click(e=>{
-			//첫번째 매개변수 주소,
-			//두번째 매개변수 callback 함수
-			$.get("<%=request.getContextPath()%>/ajax/jsAjax.do?name="+$("#data").val(),
-					data=>{
-						console.log(data);
-						$("#container").html(data);
-						});
-		})
-	
-	
 		$("#btn1").click(e=>{
 			$.ajax({
 				url:"<%=request.getContextPath()%>/ajax/jsAjax.do",
@@ -64,6 +44,27 @@
 				}
 			});
 		});
+
+
+		$("#btn2").click(e=>{
+			//첫번째 매개변수 주소,
+			//두번째 매개변수 callback 함수
+			$.get("<%=request.getContextPath()%>/ajax/jsAjax.do?name="+$("#data").val(),
+					data=>{
+						console.log(data);
+						$("#container").html(data);
+						});
+		});
+		
+
+		$("#btn3").click(e=>{
+			$.post("<%=request.getContextPath()%>/ajax/jsAjax.do",
+					{name:$("#data").val()},
+					data=>{
+						$("#container").html(data);
+					})
+		});		
+
 	</script>
 	
 	<h2>서버에 있는 문서파일 불러오기</h2>
