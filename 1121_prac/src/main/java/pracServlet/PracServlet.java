@@ -66,7 +66,8 @@ public class PracServlet extends HttpServlet {
 		html+="</body>";
 		html+="</html>";
 		
-		out.write(html);
+//		out.write(html);123123123123
+		out.write(html); 
 		
 		
 		
