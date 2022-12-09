@@ -5,9 +5,12 @@
 
 #divOuter{
     /* border: 1px solid red; */
-    align-content: center;
+    /* align-content: center;
     /* margin-top: 100px; */
-    padding-top:0px ;
+    /* padding-top:0px ; */
+    display: flex;
+    justify-content: center;
+    width: 100%;
     
 
 }
@@ -15,7 +18,11 @@
     /* border: 1px solid #075A2A; */
     width: fit-content;
     height: fit-content;
-    margin-left: 40%;
+    margin-left: 15%;
+    /* margin:auto; */
+    align-content: center;
+    
+
 }
 #updateuser-Container>hr{
     width:310px;
@@ -52,3 +59,41 @@
     border-radius: 5px;
 }
 
+/* 회원 이름/레벨 표시 */
+.profile{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    height: 80px;
+    margin: auto;
+
+}
+.profile2{
+	
+    width: fit-content;
+    height: 80px;
+    margin: 0px;
+    padding-top: 0px;
+}
+#userName{
+    margin:0px;
+}
+#userLevel{
+    background-color: #075A2A;
+    border-radius: 5px;
+    font-size: 13px;
+    padding:6px;
+    padding-left: 9px;
+    padding-right: 9px;
+    margin-top: 6px;
+    
+    color: white;
+}
+
+/* 여기까지 */
+
+
+section.content{
+    width:2000px;
+}
