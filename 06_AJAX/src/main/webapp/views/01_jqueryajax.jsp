@@ -25,7 +25,7 @@
 		success : 서버요청이 정상적으로 완료 됐을때 실행할 callback함수 
 		[error: 서버요청이 정상적으로 완료되지않았을때 실행할 callback함수]
 	</p>
-	<input id="data">
+	<input id="data" placeholder="data">
 	<button	id="btn1">기본 $.ajax요청하기</button>
 	<button	id="btn2">$.get요청하기</button>
 	<button	id="btn3">$.post요청하기</button>
@@ -50,6 +50,7 @@
 			//첫번째 매개변수 주소,
 			//두번째 매개변수 callback 함수
 			$.get("<%=request.getContextPath()%>/ajax/jsAjax.do?name="+$("#data").val(),
+			<%-- $.get("<%=request.getContextPath()%>/ajax/jsAjax.do", --%>
 					data=>{
 						console.log(data);
 						$("#container").html(data);
@@ -173,6 +174,63 @@
 			});
 		});
 	</script>
+	
+	<h2>html파일을 받아서 처리하기</h2>
+	<button id="btnhtml">html페이지 받아오기</button>
+	<div id="htmlcontainer">
+	<script>
+		$("#btnhtml").click(e=>{
+			$.get("<%=request.getContextPath()%>/ajax/htmlAjax.do",
+				data=>{
+					console.log(data);
+					$("#htmlcontainer").html(data);
+				});
+			
+		});		
+		
+	</script>
+	
+	<h3>서버에서 보내준 데이터로 화면 구현하기</h3>
+	<input type="text" id="searchKeyword" list="list">
+	<datalist id="list">
+		<option>유병승</option>
+		<option>유장승</option>
+		<option>유고승</option>
+		<option>유중승</option>
+		<option>유단승</option>
+	</datalist>
+	<button id="btnsearchmember">회원정보조회</button>
+	<h3>회원정보 확인</h3>
+	<div id="memberList"></div>
+	
+	<script>
+		$("#searchKeyword").keyup(e=>{
+			$.ajax({
+				url:"<%=request.getContextPath()%>/searchMember.do",
+				data:{"key":$("e.target").val()},
+				success:data=>{
+					console.log(data);
+					const id=data.split(",");
+					id.forEach(v=>{
+						const op=$("<option>").attr("value",v).text(v);
+					$("#list").append(op);
+					});
+				}
+			})
+		})
+	
+	
+		$("#btnsearchmember").click(e=>{
+			$.ajax({
+				url:"<%=request.getContextPath()%>/memberList.do",
+				success:data=>{
+					console.log(data);
+					$("#memberList").html(data);
+				}
+			});
+		});
+	</script>
+	
 	
 </body>
 </html>
