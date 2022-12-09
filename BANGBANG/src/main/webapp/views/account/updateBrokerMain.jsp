@@ -7,8 +7,8 @@
 <section class="content">
     <div id="divOuter">
         <div id="button-Container">        
-            <button class="btns" id="userInfo"><a href="<%=request.getContextPath()%>/account/updateUser.bb" style="color:white">일반 정보 수정</a></button>
-            <button class="btns" id="brokerInfo"><a href="<%=request.getContextPath()%>/account/broker/updateBroker.bb" style="color:white">중개사 정보 수정</a></button>
+            <button class="btns" id="userInfo" onclick="location.replace('<%=request.getContextPath()%>/account/updateUser.bb')">일반 정보 수정</a></button>
+            <button class="btns" id="brokerInfo" onclick="location.replace('<%=request.getContextPath()%>/account/broker/updateBroker.bb')">중개사 정보 수정</a></button>
         </div>
     </div>
     </section>
