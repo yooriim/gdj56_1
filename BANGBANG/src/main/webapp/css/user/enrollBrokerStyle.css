@@ -3,13 +3,17 @@
     /* border: 1px solid red; */
     align-content: center;
     display: flex;    
+    width: 100%;
+    justify-content: center;
+
 
 }
 #enrollbroker-Container{
     /* border: 1px solid #075A2A; */
     width: fit-content;
     height: fit-content;
-    margin-left: 40%;
+    justify-content: center;
+    
 }
 #enrollbroker-Container>div>hr{
     width:310px;
@@ -28,7 +32,6 @@
 #enrollBrokerBtn{
     width:310px;
     height:40px;
-    /* margin-left: 40px; */
     margin-top: 30px;
     margin-bottom: 10px;
     background-color: #075A2A;
@@ -44,4 +47,10 @@ p#info{
 
 #brokerInfo-Container{
     margin-top: 180px;
+}
+
+.content{
+    margin-top: 70px;
+    display: flex;
+    width: 100%;
 }

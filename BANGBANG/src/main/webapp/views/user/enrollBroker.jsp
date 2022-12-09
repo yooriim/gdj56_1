@@ -20,13 +20,13 @@
             <div id="brokerInfo-Container">
                 <hr>
                 <h3>중개사무소명</h3>
-                <input type="text" id="brokerName" placeholder="중개사무소명을 입력해주세요">
+                <input type="text" name="brokerName" id="brokerName" placeholder="중개사무소명을 입력해주세요">
                 <h3>중개사무소 주소</h3>
-                <input type="text" id="brokerAddr" placeholder="중개사무소 주소를 입력해주세요">
+                <input type="text" name="brokerAddr" id="brokerAddr" placeholder="중개사무소 주소를 입력해주세요">
                 <h3>중개등록번호</h3>
-                <input type="text" id="brokerNo" placeholder="중개등록번호를 입력해주세요">
+                <input type="text" name="brokerNo" id="brokerNo" placeholder="중개등록번호를 입력해주세요">
                 <h3>대표 전화번호</h3>
-                <input type="text" id="brokerPhone" placeholder="대표 전화번호를 입력해주세요">
+                <input type="text" name="brokerPhone" id="brokerPhone" placeholder="대표 전화번호를 입력해주세요">
                 <br>
                 <button id="enrollBrokerBtn">등록신청</button>
                 <br>
